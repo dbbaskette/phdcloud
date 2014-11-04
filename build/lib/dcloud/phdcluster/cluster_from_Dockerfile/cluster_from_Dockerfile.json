@@ -1,0 +1,12 @@
+{
+	"id" : "phdcluster",
+	"domain" : "pivotal.laptoplab",
+	"dns" : ["8.8.8.8", "8.8.4.4"],
+	"nodes": [
+		{
+			"hostname" : "phd[0..6]",
+			"Dockerfile" : "/usr/lib/python2.6/site-packages/dcloud/phdcluster/cluster_from_Dockerfile/.",
+			"cmd" : "service sshd start && service httpd start && tail -f /var/log/yum.log"
+		}
+	]
+}

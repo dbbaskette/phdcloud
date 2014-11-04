@@ -1,0 +1,12 @@
+{
+	"id" : "ambaricluster",
+	"domain" : "laptop.net",
+	"dns" : ["8.8.8.8", "8.8.4.4"],
+	"nodes": [
+		{
+			"hostname" : "hadoop[0..6]",
+            "imageName" : "dbbaskette/ambaribase",
+			"cmd" : "service sshd start && service httpd start && tail -f /var/log/yum.log"
+		}
+	]
+}
